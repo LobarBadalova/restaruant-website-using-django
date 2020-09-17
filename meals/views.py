@@ -1,9 +1,10 @@
 from django.shortcuts import render
-from .models import Meals
+from .models import Meals, Category
 # Create your views here.
 def meal_list(request):
 	meal_list=Meals.objects.all()
-	context={'meal_list':meal_list,}
+	category=Category.objects.all()
+	context={'meal_list':meal_list, 'category':category}
 	return render(request, 'Meals/list.html', context)
 
 def meal_detail(request, slug):
