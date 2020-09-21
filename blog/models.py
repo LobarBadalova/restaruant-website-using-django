@@ -23,3 +23,8 @@ class Category(models.Model):
 	name=models.CharField(default='', max_length=300)
 	def __str__(self):
 		return self.name
+class Comments(models.Model):
+	 user=models.ForeignKey(User, on_delete=models.CASCADE)
+	 post=models.ForeignKey(Post, on_delete=models.CASCADE)
+	 content=models.TextField(default='')
+	 created=models.DateTimeField(default=timezone.now)
