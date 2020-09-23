@@ -35,12 +35,12 @@
       <nav class="site-menu">
         <div class="site-menu-inner">
           <ul class="list-unstyled">
-            <li class="active"><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="menu.html">Our Menu</a></li>
+            <li class="active"><a href="/">Home</a></li>
+            <li><a href="{% url 'blog:about_us' %}">About Us</a></li>
+            <li><a href="/meals/">Our Menu</a></li>
             <li><a href="{% url 'blog:post_list'%}">Our Blog</a></li>
             <li><a href="{% url 'reservation:reservation'%}">Reserve A Table</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="/contact/">Contact</a></li>
           </ul>
         </div>
       </nav>
@@ -55,7 +55,7 @@
             </ul>
           </div>
           <div class="col-2 col-md-6 text-center">
-            <a href="index.html" class="site-logo">D</a>
+            <a href="/" class="site-logo">D</a>
           </div>
           <div class="col-5 col-md-3 text-right menu-burger-wrap">
             <a href="#" class="site-nav-toggle js-site-nav-toggle"><i></i></a>

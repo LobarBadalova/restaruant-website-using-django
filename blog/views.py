@@ -31,3 +31,7 @@ def post_detail(request, id):
 			'comment_form':comment_form
 	}
 	return render(request, 'Blog/post_detail.html', context)
+
+
+def about_us(request):
+	return render(request, "Blog/about.html", {})
