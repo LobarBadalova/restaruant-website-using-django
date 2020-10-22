@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
-
+{% load bootstrap4 %}
 {% block content %}
 
       
@@ -66,8 +66,8 @@
                     <h3 class="mb-5">Leave a comment</h3>
                     <form  method="POST" class="p-5 bg-light">
                       {% csrf_token %}
+                      {% bootstrap_form comment_form %}
 
-                      {{ comment_form }}
                      <!--  <div class="form-group">
 
                         <label for="name">Name *</label>
@@ -86,9 +86,11 @@
                         <label for="message">Message</label>
                         <textarea name="" id="message" cols="30" rows="10" class="form-control"></textarea>
                       </div> -->
+                      {% buttons %}
                       <div class="form-group">
                         <input type="submit" value="Post Comment" class="btn btn-primary">
                       </div>
+                      {% endbuttons %}
 
                     </form>
                   </div>

@@ -19,6 +19,8 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
+    path('summernote/', include('django_summernote.urls')),
+    path('', include('home.urls', namespace='home')),
     path('meals/', include('meals.urls', namespace='meals')),
     path('contact/', include('contact.urls', namespace='contact')),
     path('blog/', include('blog.urls', namespace='blog')),

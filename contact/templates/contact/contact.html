@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
-
+{% load bootstrap4 %}
 {% block content %}
 
       
@@ -58,13 +58,17 @@
                    </div>
                   </div> -->
                   {% csrf_token %}
-                  {{form}}
+                  {% bootstrap_form form %}
+                  
                   <div class="row justify-content-center">
                     <div class="col-md-4">
+                      {% buttons %}
                       <input type="submit" class="btn btn-primary btn-outline-primary btn-block" value="Submit">
+                      {% endbuttons %}
                       <!-- <p><a href="#" class="btn btn-primary btn-outline-primary btn-sm">Read More</a></p> -->
                     </div>
                   </div>
+
                 </form>
               </div>
             </div>
